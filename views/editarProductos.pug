@@ -1,0 +1,42 @@
+extends layout 
+block contenido
+    .contenido-principal 
+        .modal-dialog
+        .modal-content
+            //Modal Header
+            .modal-header 
+                h4#myModalLabel.modal-title #{nombrePagina}
+            //Modal Body
+            .modal-body 
+                form(role='form' method='POST' action=`/editar-producto/${productoEditar.cond_numero}` data-toggle="validator")
+                    label.invisible(id='huno' style.display = 'none')=`${productoEditar.cond_tipo}`
+                    .form-group 
+                        label(for='nombre') Nombre del producto: 
+                        input#name.form-control(type='text', placeholder='Escriba el nombre del producto' name='cond_nombre' value=`${ productoEditar.cond_nombre}` required)
+                    .form-group 
+                        .input-group.mb-3 
+                            .input-group-prepend 
+                                label.input-group-text(for='tipo') Tipo del producto 
+                            select#inputGroupSelect01.custom-select(name='cond_tipo' value=`${ productoEditar.cond_tipo}` required)
+                                option(selected='' enable=false)
+                                option(value='Verduras') Verduras 
+                                option(value='Frutas') Frutas
+                                option(value='Granos') Granos
+                    .form-group 
+                        label(for='descripcion') Descripcion del producto: 
+                        input#name.form-control(type='text' placeholder='Escriba una pequeña descripcion del producto' name='cond_descripcion' value=`${ productoEditar.cond_descripcion}` required)
+                    .form-group 
+                        label(for='cantidad') Cantidad del producto en bulto: 
+                        input#name.form-control(type='number' placeholder='Digite la cantidad a vender del producto' name='cond_cantidad' value=`${ productoEditar.cond_cantidad}` required)
+                    //.form-group
+                        label(for='email') Email: 
+                        input#email.form-control(type='email'), placeholder='name@email.com' name='email')
+                    button.btn.btn-primary(type='submit', name='agregar') Actualizar 
+                    script.
+                        let tb = document.getElementById('huno').innerHTML;
+                        $("#cond_tipo option:contains("+tb+")").attr('selected', true);
+                //Modal Footer
+                .modal-footer 
+                    h5 footer 
+                // Footer
+                p.foot.text-xs-center test

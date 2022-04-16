@@ -1,0 +1,48 @@
+extends layout
+
+block contenido
+    .contenido-principal
+        h1 #{nombrePagina}
+        section.d-flex.flex-wrap.justify-content-evenly.padre
+            section.col-xl-4.col-md-6.col-12.align-items-center.mision
+                h4.titulo MISION
+                p.texto
+                    | Con nuestra página web buscamos abrir el comercio a los productos
+                    | agrícolas que venden cientos de campesinos, bajo esto también buscamos
+                    | la facilidad de compraventa de consumidores y productores para así
+                    | ayudar a mejorar la calidad de vida de nuestros campesinos y sus
+                    | familias, entonces así nuestros campesinos podrán vender la mayoría de
+                    | sus productos a su mejor precio como igual nuestros consumidores
+                    | tendrán más facilidad de acceder a los productos campesinos.
+                img.col-xl-10.col-md-11.col-11(src='/img/imgmision.jpg' alt='')
+            section.col-xl-4.col-md-6.col-12.align-items-center.vision
+                img.col-xl-10.col-md-11.col-11.imgvision(src='/img/imgvision.jpg' alt='')
+                h4.titulo VISION
+                p.texto
+                    | Lo que buscamos en un futuro es ser el apoyo a los campesinos
+                    | que salen a vender sus productos a las plazas de mercado con lo cual
+                    | poder publicar sus productos a través de nuestro aplicativo web, lo
+                    | cual llegaremos a ser será una plaza de mercado totalmente virtual
+                    | brindándole apoyo a los diferentes agricultores. También poder ayudar a nivel nacional a
+                    | todos nuestros agricultores campesinos con nuestro aplicativo web y
+                    | así ayudarles a vender todos sus productos y mejorar su calidad de
+                    | vida. Ya que serán más las posibilidades de que lleguen sus productos
+                    | a la mayoría de consumidores.
+            section.col-xl-4.col-md-12.col-12.top
+                h4.titulo TOP DE CALIFICACIONES
+                section.d-flex.justify-content-evenly.align-items-center.tops
+                    p.nomT Julian Rodriguez
+                    img(src='/img/top1.png' alt='')
+                section.d-flex.justify-content-evenly.align-items-center.tops
+                    p.nomT Luz Perez
+                    img(src='/img/top2.png' alt='')
+                section.d-flex.justify-content-evenly.align-items-center.tops
+                    p.nomT Jorge Perez
+                    img(src='/img/top3.png' alt='')
+                section.d-flex.justify-content-evenly.align-items-center.tops
+                    p.nomT Seferina Latorre
+                    img(src='/img/top4.png' alt='')
+                section.d-flex.justify-content-evenly.align-items-center.tops
+                    p.nomT Maria Marin
+                    img(src='/img/top5.png' alt='')
+                img.col-xl-8.col-md-5.col-11.imgtop(src='/img/imgtop.jpg' alt='')

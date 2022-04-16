@@ -1,0 +1,47 @@
+.cuadro-inicio{
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.padre {
+    margin: 15px;
+}
+.mision {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+.vision {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+.top {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+.titulo {
+    color: aliceblue;
+    padding: 5px;
+    background-color: rgb(56, 165, 42);
+    border-radius: 15px;
+}
+.texto {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.tops {
+    margin-top: 20px;
+}
+.nomT {
+    margin-top: 10px;
+    font-size: 25px;
+}
+.imgvision {
+    margin-bottom: 30px;
+}
+.imgtop{
+    margin-top: 30px;
+}

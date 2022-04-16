@@ -1,0 +1,34 @@
+extends layout 
+block contenido 
+    div 
+        .container 
+            a.btn.btn-outline-primary.mt-4(href="/nuevo-cliente") Nuevo cliente
+                i.bx.bxs-plus-circle.bx-md(<='' i='')
+        div 
+            if(clientes.length)
+                table.table.tabled-bordered.table-striped.text-center.mt-2 Listado de Clientes 
+                    thead  
+                        tr.bg-success.text-white 
+                            th(scope='col')
+                                | No de documento 
+                            th(scope='col')
+                                | nombre
+                            th(scope='col')
+                                | fecha nacimiento 
+                            th(scope='col')
+                                | Sexo 
+                            th(scope='col')
+                                | Direccion
+                            th(scope='col')
+                                | Opcion 
+                    tbody 
+                        each cliente in clientes 
+                            tr 
+                                td=cliente.cond_documento
+                                td=cliente.cond_nombre
+                                td=cliente.cond_fecha_nacimiento 
+                                td=cliente.cond_sexo
+                                td=cliente.cond_direccion
+                                td
+                                    a.btn.btn-success.mt-2.ms-3(href='/editar-cliente/' + `${cliente.cond_numero}`) Editar 
+                                    a.btn.btn-danger.mt-2.ms-3(onclick=`btnEliminarCliente(${cliente.cond_numero})` id='eliminar-cliente' type='button') Borrar

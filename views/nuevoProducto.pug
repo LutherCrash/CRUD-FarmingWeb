@@ -1,0 +1,38 @@
+extends layout 
+block contenido
+    .contenido-principal 
+        .modal-dialog
+        .modal-content
+            //Modal Header
+            .modal-header 
+                h4#myModalLabel.modal-title #{nombrePagina}
+            //Modal Body
+            .modal-body 
+                form(role='form' method='POST' action='/nuevo-producto' data-toggle="validator")
+                    .form-group 
+                        label(for='nombre') Nombre del producto: 
+                        input#name.form-control(type='text', placeholder='Escriba el nombre del producto' name='cond_nombre' required)
+                    .form-group 
+                        .input-group.mb-3 
+                            .input-group-prepend 
+                                label.input-group-text(for='tipo') Tipo del producto 
+                            select#inputGroupSelect01.custom-select(name='cond_tipo' required)
+                                option(selected='' enable=false)
+                                option(value='Verduras') Verduras 
+                                option(value='Frutas') Frutas
+                                option(value='Granos') Granos
+                    .form-group 
+                        label(for='descripcion') Descripcion del producto: 
+                        input#name.form-control(type='text' placeholder='Escriba una pequeña descripcion del producto' name='cond_descripcion' required)
+                    .form-group 
+                        label(for='cantidad') Cantidad del producto en bulto: 
+                        input#name.form-control(type='number' placeholder='Digite la cantidad a vender del producto' name='cond_cantidad' required)
+                    //.form-group
+                        label(for='email') Email: 
+                        input#email.form-control(type='email'), placeholder='name@email.com' name='email')
+                    button.btn.btn-primary(type='submit', name='agregar') Agregar 
+                //Modal Footer
+                .modal-footer 
+                    h5 footer 
+                // Footer
+                p.foot.text-xs-center test

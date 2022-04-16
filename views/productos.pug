@@ -1,0 +1,31 @@
+extends layout 
+block contenido 
+    div 
+        .container 
+                a.btn.btn-outline-primary.mt-4(href="/nuevo-producto") Nueva oferta
+                    i.bx.bxs-plus-circle.bx-md(<='' i='')
+        div 
+            if(productos.length)
+                table.table.tabled-bordered.table-striped.text-center.mt-2 Listado de ofertas 
+                    thead  
+                        tr.bg-success.text-white 
+                            th(scope='col')
+                                | nombre del producto 
+                            th(scope='col')
+                                | tipo del producto
+                            th(scope='col')
+                                | descripcion del producto 
+                            th(scope='col')
+                                | cantidad 
+                            th(scope='col')
+                                | Opcion 
+                    tbody 
+                        each producto in productos
+                            tr 
+                                td=producto.cond_nombre
+                                td=producto.cond_tipo
+                                td=producto.cond_descripcion
+                                td=producto.cond_cantidad
+                                td
+                                    a.btn.btn-success.mt-2.ms-3(href='/editar-producto/' + `${producto.cond_numero}`) Editar 
+                                    a.btn.btn-danger.mt-2.ms-3(onclick=`btnEliminarProducto(${producto.cond_numero})` id='eliminar-producto' type='button') Borrar

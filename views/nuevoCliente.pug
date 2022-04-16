@@ -1,0 +1,43 @@
+extends layout 
+block contenido
+    .contenido-principal 
+        .modal-dialog
+        .modal-content
+            //Modal Header
+            .modal-header 
+                h4#myModalLabel.modal-title #{nombrePagina}
+            //Modal Body
+            .modal-body 
+                form(role='form' method='POST' action='/nuevo-cliente' data-toggle="validator")
+                    .form-group 
+                        label(for='documento') No de Documento: 
+                        input#name.form-control(type='number', placeholder='Escriba su numero de documento' name='cond_documento' required)
+                    .form-group 
+                        label(for='nombre') Nombre: 
+                        input#name.form-control(type='text', placeholder='Digite su nombre' name='cond_nombre' required)
+                    .form-group 
+                        label(for='fecha-nacimiento') Fecha de nacimiento: 
+                        .input-group.date 
+                            input.from-control(type='date' name='cond_fecha_nacimiento' required)
+                            span.input-group-addon
+                                i.glyphicon.glyphicon-th 
+                    .form-group 
+                        .input-group.mb-3 
+                            .input-group-prepend 
+                                label.input-group-text(for='sexo') Sexo 
+                            select#inputGroupSelect01.custom-select(name='cond_sexo' required)
+                                option(selected='' enable=false)
+                                option(value='F') Femenino 
+                                option(value='M') Masculino
+                    .form-group 
+                        label(for='direccion') Direccion: 
+                        input#name.form-control(type='text', placeholder='Escriba su direccion' name='cond_direccion' required)
+                    //.form-group
+                        label(for='email') Email: 
+                        input#email.form-control(type='email'), placeholder='name@email.com' name='email')
+                    button.btn.btn-primary(type='submit', name='agregar') Agregar 
+                //Modal Footer
+                .modal-footer 
+                    h5 footer 
+                // Footer
+                p.foot.text-xs-center test

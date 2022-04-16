@@ -1,0 +1,34 @@
+extends layout 
+block contenido 
+    div 
+        .container 
+            a.btn.btn-outline-primary.mt-4(href="/nuevo-agricultor") Nuevo agricultor
+                i.bx.bxs-plus-circle.bx-md(<='' i='')
+        div 
+            if(agricultores.length)
+                table.table.tabled-bordered.table-striped.text-center.mt-2 Listado de Agricultores 
+                    thead  
+                        tr.bg-success.text-white
+                            th(scope='col')
+                                | No de documento 
+                            th(scope='col')
+                                | nombre
+                            th(scope='col')
+                                | fecha nacimiento 
+                            th(scope='col')
+                                | Sexo 
+                            th(scope='col')
+                                | Direccion
+                            th(scope='col')
+                                | Opcion 
+                    tbody 
+                        each agricultor in agricultores 
+                            tr 
+                                td=agricultor.cond_documento
+                                td=agricultor.cond_nombre
+                                td=agricultor.cond_fecha_nacimiento 
+                                td=agricultor.cond_sexo
+                                td=agricultor.cond_direccion
+                                td
+                                    a.btn.btn-success.mt-2.ms-3(href='/editar-agricultor/' + `${agricultor.cond_numero}`) Editar 
+                                    a.btn.btn-danger.mt-2.ms-3(onclick=`btnEliminarAgricultor(${agricultor.cond_numero})` id='eliminar-agricultor' type='button') Borrar
